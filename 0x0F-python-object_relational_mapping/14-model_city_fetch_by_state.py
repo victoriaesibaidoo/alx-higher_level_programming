@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" model_city.py that contains the class definition of a City
+""" prints the State object with the name passed as argument from the database
 """
 import sys
 from model_state import Base, State

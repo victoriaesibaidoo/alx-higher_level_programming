@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" prints the first State object from the database
+""" prints the first State object from the database hbtn_0e_6_usa
 """
 import sys
 from model_state import Base, State
@@ -13,8 +13,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    object_data = session.query(State).first()
-    if object_data is None:
+    instance = session.query(State).first()
+    if instance is None:
         print("Nothing")
     else:
-        print(object_data.id, object_data.name, sep=": ")
+        print(instance.id, instance.name, sep=": ")
